@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         if let cardNumber = cardButtons.firstIndex(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
-        } 
+        }
     }
     
     func updateViewFromModel() {
@@ -44,17 +44,16 @@ class ViewController: UIViewController {
     var emoji = [Int:String]()
     
     func emoji(for card: Card) -> String {
-//        if emoji[card.identifier] != nil {
-//            return emoji[card.identifier]!
-//        } else {
-//            return "?"
-//        } // идентичный код с оператором ??
-        
         if emoji[card.identifier] == nil, emojiChoices.count > 0 {
             let randomIndex = Int(arc4random_uniform(UInt32(emoji.count)))
             emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
         }
         return emoji[card.identifier] ?? "?"
+//        if emoji[card.identifier] != nil {
+//            return emoji[card.identifier]!
+//        } else {
+//            return "?"
+//        } // идентичный код с оператором ??
     }
     
     
@@ -67,5 +66,6 @@ class ViewController: UIViewController {
 //            button.backgroundColor = UIColor.white
 //        }
 //    }
+    
 }
 
