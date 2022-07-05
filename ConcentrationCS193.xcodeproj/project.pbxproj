@@ -28,17 +28,8 @@
 		220823EE28553EF10003BB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		220823F628554B660003BB27 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		220823F828554BD00003BB27 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		229AC3402873752800762932 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		220823DA28553EEE0003BB27 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		220823D428553EEE0003BB27 = {
@@ -46,6 +37,7 @@
 			children = (
 				220823DF28553EEE0003BB27 /* ConcentrationCS193 */,
 				220823DE28553EEE0003BB27 /* Products */,
+				229AC33F2873752700762932 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +65,14 @@
 			path = ConcentrationCS193;
 			sourceTree = "<group>";
 		};
+		229AC33F2873752700762932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				229AC3402873752800762932 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,7 +81,6 @@
 			buildConfigurationList = 220823F128553EF10003BB27 /* Build configuration list for PBXNativeTarget "ConcentrationCS193" */;
 			buildPhases = (
 				220823D928553EEE0003BB27 /* Sources */,
-				220823DA28553EEE0003BB27 /* Frameworks */,
 				220823DB28553EEE0003BB27 /* Resources */,
 			);
 			buildRules = (

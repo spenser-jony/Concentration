@@ -4,14 +4,14 @@
 //
 //  Created by user on 12.06.2022.
 //
-
+import MapKit
 import Foundation
 
 class Concentration
 {
     var cards = [Card]()
     
-    private var indexOfOneAndOnlyFaceUpCard: Int? {
+    var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
             var foundIndex: Int?
             for index in cards.indices {
@@ -25,7 +25,7 @@ class Concentration
             }
             return foundIndex
         }
-        set (newValue){
+        set (newValue) {
             for index in cards.indices {
                 cards[index].isFaceUp = (newValue == index)
             }
@@ -35,6 +35,7 @@ class Concentration
     func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Concentration.choosesCard(at: \(index)): choosen index not in the cards")
         if !cards[index].isMatched {
+
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 // check if cards match
                 if cards[matchIndex].identifier == cards[index].identifier {

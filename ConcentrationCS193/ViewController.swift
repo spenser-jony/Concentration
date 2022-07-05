@@ -65,27 +65,10 @@ class ViewController: UIViewController {
     
     private func emoji(for card: Card) -> String {
         if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-//            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
             emoji[card.identifier] = emojiChoices.remove(at: emoji.count.arc4random)
         }
         return emoji[card.identifier] ?? "?"
-//        if emoji[card.identifier] != nil {
-//            return emoji[card.identifier]!
-//        } else {
-//            return "?"
-//        } // идентичный код с оператором ??
     }
-    
-    
-//    func flipCard(withEmoji emoji: String, on : UIButton) {
-//        if button.currentTitle == emoji {
-//            button.setTitle("", for: UIControl.State.normal)
-//            button.backgroundColor = UIColor.orange
-//        } else {
-//            button.setTitle(emoji, for: UIControl.State.normal)
-//            button.backgroundColor = UIColor.white
-//        }
-//    }
     
 }
 
